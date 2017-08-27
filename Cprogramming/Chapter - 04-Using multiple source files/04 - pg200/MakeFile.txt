@@ -1,0 +1,8 @@
+hellofunc.o: hellofunc.c hellomake.h
+	gcc -c hellofunc.c
+	
+hellomake.o: hellomake.h hellomake.c
+	gcc -c hellomake.c
+	
+hellofunc: hellofunc.o hellomake.o
+	gcc hellofunc.o hellomake.o -o launch
